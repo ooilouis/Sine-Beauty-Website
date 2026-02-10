@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Phone, Mail } from 'lucide-react';
 
@@ -61,10 +60,10 @@ const ContactUs: React.FC = () => {
                                     <h3 className="font-bold text-gray-400 tracking-widest uppercase text-sm mb-2">For General Enquiries</h3>
                                     <div className="flex flex-col gap-1">
                                         <a href="mailto:enquiry@caringskin.com.sg" className="hover:text-teal-600 transition-colors inline-flex items-center gap-2">
-                                            enquiry@caringskin.com.sg
+                                            <Mail size={16} /> enquiry@caringskin.com.sg
                                         </a>
                                         <a href="tel:+6587680183" className="hover:text-teal-600 transition-colors inline-flex items-center gap-2">
-                                            +65 8768 0183
+                                            <Phone size={16} /> +65 8768 0183
                                         </a>
                                     </div>
                                 </div>
@@ -72,14 +71,14 @@ const ContactUs: React.FC = () => {
                                 <div>
                                     <h3 className="font-bold text-gray-400 tracking-widest uppercase text-sm mb-2">For Media Enquiries</h3>
                                     <a href="mailto:media@caringskin.com.sg" className="hover:text-teal-600 transition-colors inline-flex items-center gap-2">
-                                        media@caringskin.com.sg
+                                        <Mail size={16} /> media@caringskin.com.sg
                                     </a>
                                 </div>
 
                                 <div>
                                     <h3 className="font-bold text-gray-400 tracking-widest uppercase text-sm mb-2">For Customer Feedback</h3>
                                     <a href="mailto:subrina.liew@caringskin.com.sg" className="hover:text-teal-600 transition-colors inline-flex items-center gap-2">
-                                        subrina.liew@caringskin.com.sg
+                                        <Mail size={16} /> subrina.liew@caringskin.com.sg
                                     </a>
                                 </div>
                             </div>
@@ -87,13 +86,11 @@ const ContactUs: React.FC = () => {
 
                         {/* Right Form (Iframe) */}
                         <div className="lg:w-1/2">
-                            <div className="w-full h-full min-h-[1104px]">
+                            <div className="bg-gray-50 rounded-lg overflow-hidden h-full min-h-[600px] border border-gray-100">
                                 <iframe 
                                     src="https://forms.zohopublic.com/caringgrouppteltd/form/ContactUs1/formperma/3Dhe-PHhtcCksVX3QiY3CEctPj4oVF2fEIyGxlpe9tU?zf_rszfm=1"
-                                    className="w-full h-full border-none transition-all duration-500 ease-in-out"
-                                    title="Contact Us"
-                                    aria-label="Contact Us"
-                                    style={{ border: 'none', height: '1104px', width: '100%' }}
+                                    className="w-full h-full min-h-[1100px] border-none"
+                                    title="Contact Us Form"
                                 ></iframe>
                             </div>
                         </div>
@@ -102,28 +99,26 @@ const ContactUs: React.FC = () => {
             </section>
 
             {/* Visit Our Outlets Section */}
-            <section className="py-20 bg-white" id="so">
+            <section className="py-20 bg-[#f9fafb]">
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-serif text-center mb-12 text-gray-900">Visit Our Outlets</h2>
                     
                     <div className="space-y-8">
                         {outlets.map((outlet, idx) => (
-                            <div key={idx} className="bg-white">
+                            <div key={idx} className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
                                 <div className="flex flex-col lg:flex-row gap-8">
                                     <div className="lg:w-1/4">
-                                        <div className="rounded-none overflow-hidden">
-                                            <img src={outlet.image} alt={outlet.name} className="w-full h-auto object-cover" />
-                                        </div>
+                                        <img src={outlet.image} alt={outlet.name} className="w-full h-auto rounded-sm object-cover" />
                                     </div>
                                     <div className="lg:w-3/4 flex flex-col justify-center">
                                         <h3 className="text-2xl font-serif font-bold text-gray-900 mb-6">{outlet.name}</h3>
                                         
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                                             <div>
-                                                <address className="not-italic text-gray-600 mb-2 leading-relaxed text-sm">
+                                                <address className="not-italic text-gray-600 mb-2 leading-relaxed">
                                                     {outlet.address}
                                                 </address>
-                                                <a href={`tel:${outlet.phone.replace(/\s/g, '')}`} className="text-teal-600 font-bold hover:text-teal-800 text-sm">
+                                                <a href={`tel:${outlet.phone.replace(/\s/g, '')}`} className="text-teal-600 font-bold hover:text-teal-800">
                                                     {outlet.phone}
                                                 </a>
                                             </div>
@@ -141,7 +136,7 @@ const ContactUs: React.FC = () => {
                                                     href={outlet.mapLink} 
                                                     target="_blank" 
                                                     rel="noreferrer"
-                                                    className="inline-block border border-gray-800 text-gray-800 px-6 py-3 text-xs font-bold tracking-widest uppercase hover:bg-gray-800 hover:text-white transition-all rounded-none"
+                                                    className="inline-block border border-gray-300 text-gray-700 px-6 py-3 text-xs font-bold tracking-widest uppercase hover:bg-gray-800 hover:text-white transition-all rounded"
                                                 >
                                                     Visit Location
                                                 </a>

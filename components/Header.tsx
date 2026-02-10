@@ -117,12 +117,14 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
                     </a>
                 </div>
             </div>
-            <div className="relative group">
+            
+            {/* TREATMENTS Menu - Changed to static group so absolute child positions relative to container */}
+            <div className="group static">
                 <button className="flex items-center gap-1 text-sm font-semibold tracking-widest text-gray-700 hover:text-teal-600 transition-colors uppercase">
                 TREATMENTS <ChevronDown size={14} />
                 </button>
-                {/* Mega Menu */}
-                <div className="fixed left-0 top-full w-full bg-white shadow-lg border-t border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                {/* Mega Menu - Absolute to container */}
+                <div className="absolute left-0 top-full w-full bg-white shadow-lg border-t border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 mt-4">
                     <div className="container mx-auto px-4 py-8">
                         <div className="flex justify-between items-center mb-6 pb-4 border-b border-gray-100">
                             <h2 className="text-2xl font-serif text-gray-800">Treatments</h2>
