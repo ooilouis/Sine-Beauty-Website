@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Mail } from 'lucide-react';
+import CmsManagedForm from './CmsManagedForm';
 
 const outlets = [
     {
@@ -84,15 +85,9 @@ const ContactUs: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Right Form (Iframe) */}
+                        {/* Right Form */}
                         <div className="lg:w-1/2">
-                            <div className="bg-gray-50 rounded-lg overflow-hidden h-full min-h-[600px] border border-gray-100">
-                                <iframe 
-                                    src="https://forms.zohopublic.com/caringgrouppteltd/form/ContactUs1/formperma/3Dhe-PHhtcCksVX3QiY3CEctPj4oVF2fEIyGxlpe9tU?zf_rszfm=1"
-                                    className="w-full h-full min-h-[1100px] border-none"
-                                    title="Contact Us Form"
-                                ></iframe>
-                            </div>
+                            <CmsManagedForm formKey="contact-us" />
                         </div>
                     </div>
                 </div>

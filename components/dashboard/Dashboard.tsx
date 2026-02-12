@@ -13,6 +13,7 @@ import ContactEditor from './ContactEditor';
 import SettingsEditor from './SettingsEditor';
 import BlogPostsEditor from './BlogPostsEditor';
 import LandingPagesEditor from './LandingPagesEditor';
+import FormsEditor from './FormsEditor';
 
 // Placeholder components for editors
 import GuaranteeEditor from './GuaranteeEditor';
@@ -213,6 +214,7 @@ const Dashboard: React.FC = () => {
             case 'stories': return <StoriesEditor />;
             case 'blog-posts': return <BlogPostsEditor />;
             case 'landing-pages': return <LandingPagesEditor />;
+            case 'forms': return <FormsEditor />;
             case 'faq': return <FAQEditor />;
             case 'contact': return <ContactEditor />;
             case 'popup': return role === 'admin' ? <SettingsEditor /> : <HeroEditor />;

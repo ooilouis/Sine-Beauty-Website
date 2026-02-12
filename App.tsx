@@ -7,6 +7,7 @@ import CustomerStories from './components/CustomerStories';
 import Blog from './components/Blog';
 import BlogPostTemplate from './components/BlogPostTemplate';
 import LandingPageTemplate from './components/LandingPageTemplate';
+import FormTemplate from './components/FormTemplate';
 import ContactUs from './components/ContactUs';
 import FAQ from './components/FAQ';
 import TreatmentTemplate from './components/TreatmentTemplate';
@@ -33,6 +34,7 @@ const pathToPage = (path: string) => {
   if (normalized === '/faq') return 'faq';
   if (normalized === '/contact-us') return 'contact';
   if (normalized === '/shop') return 'shop';
+  if (normalized.startsWith('/form/')) return `form/${normalized.replace('/form/', '')}`;
   if (normalized.startsWith('/lp/')) return `landing/${normalized.replace('/lp/', '')}`;
   return 'home';
 };
@@ -46,6 +48,7 @@ const pageToPath = (page: string) => {
   if (page === 'faq') return '/faq';
   if (page === 'contact') return '/contact-us';
   if (page === 'shop') return '/shop';
+  if (page.startsWith('form/')) return `/form/${page.split('/')[1]}`;
   if (page.startsWith('landing/')) return `/lp/${page.split('/')[1]}`;
   return '/';
 };
@@ -135,6 +138,13 @@ const App: React.FC = () => {
       const page = landingPages.find((item) => item.slug === landingSlug && item.isActive);
       if (page) {
         return <LandingPageTemplate data={page} />;
+      }
+    }
+
+    if (currentPage.startsWith('form/')) {
+      const formKey = currentPage.split('/')[1];
+      if (formKey) {
+        return <FormTemplate formKey={formKey} />;
       }
     }
 

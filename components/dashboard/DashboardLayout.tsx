@@ -8,6 +8,7 @@ import {
     Settings,
     Image,
     Layout,
+    FormInput,
     LogOut,
     Menu,
     X
@@ -26,6 +27,7 @@ const navItems = [
     { id: 'stories', label: 'Customer Stories', icon: <Users size={20} />, roles: ['admin', 'editor'] },
     { id: 'blog-posts', label: 'Blog Posts', icon: <CreditCard size={20} />, roles: ['admin', 'editor'] },
     { id: 'landing-pages', label: 'Landing Pages', icon: <Layout size={20} />, roles: ['admin', 'editor'] },
+    { id: 'forms', label: 'Forms', icon: <FormInput size={20} />, roles: ['admin', 'editor'] },
     { id: 'faq', label: 'FAQ', icon: <HelpCircle size={20} />, roles: ['admin', 'editor'] },
     { id: 'guarantee', label: 'Guarantee Items', icon: <ShieldCheck size={20} />, roles: ['admin', 'editor'] },
     { id: 'contact', label: 'Contact Outlets', icon: <MapPin size={20} />, roles: ['admin', 'editor'] },

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { SingleTreatmentPageData } from '../types';
 import { Play, Plus, Minus } from 'lucide-react';
 import Reviews from './Reviews';
+import CmsManagedForm from './CmsManagedForm';
 
 interface SingleTreatmentTemplateProps {
     data: SingleTreatmentPageData;
@@ -177,13 +178,11 @@ const SingleTreatmentTemplate: React.FC<SingleTreatmentTemplateProps> = ({ data 
                             </p>
                         </div>
                         <div className="lg:w-1/2">
-                            <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden h-[600px]">
-                                 <iframe 
-                                    src="https://forms.zohopublic.com/caringgrouppteltd/form/CaringskinJourney/formperma/TENRtlr7iC818vObVAIwzVm2yjVJBEnjmG-VZd_z_Xk?zf_rszfm=1"
-                                    className="w-full h-full border-none"
-                                    title="Treatments Form"
-                                ></iframe>
-                            </div>
+                            <CmsManagedForm
+                                formKey="treatment-booking"
+                                hideTitle
+                                extraPayload={{ treatment: data.title }}
+                            />
                         </div>
                     </div>
                 </div>
