@@ -106,7 +106,7 @@ const CustomerStories: React.FC = () => {
     return (
         <div className="animate-in fade-in duration-500">
             {/* Intro */}
-            <section className="py-20 bg-white">
+            <section className="pt-36 pb-20 bg-white">
                 <div className="container mx-auto px-4 text-center">
                     <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">Hear What They Say</h1>
                     <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Pill, AlertTriangle, DollarSign } from 'lucide-react';
 
 const ProblemSolution: React.FC = () => {
   return (
@@ -8,9 +7,9 @@ const ProblemSolution: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Image */}
           <div className="w-full lg:w-1/2">
-            <img 
-              src="https://picsum.photos/600/700?random=20" 
-              alt="Skin Problems" 
+            <img
+              src="https://caringskin.com.sg/wp-content/uploads/2023/10/skin-problem-image-left.jpg"
+              alt="Skin Problems"
               className="w-full h-auto rounded-sm shadow-xl"
             />
           </div>
@@ -23,26 +22,20 @@ const ProblemSolution: React.FC = () => {
             <p className="text-gray-600 mb-10 leading-relaxed">
               Did you undergo any of the following to tackle your skin concerns? For many, caring for your skin can be overwhelming. We understand how frustrating it is to experience persistent, recurring skin problems without sustainable results.
             </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-               <div className="text-center">
-                  <div className="w-16 h-16 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-4 text-teal-600">
-                     <Pill size={32} />
-                  </div>
-                  <span className="font-semibold text-gray-800">Prescribed Medication</span>
-               </div>
-               <div className="text-center">
-                  <div className="w-16 h-16 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-4 text-teal-600">
-                     <AlertTriangle size={32} />
-                  </div>
-                  <span className="font-semibold text-gray-800">Invasive Procedures</span>
-               </div>
-               <div className="text-center">
-                  <div className="w-16 h-16 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-4 text-teal-600">
-                     <DollarSign size={32} />
-                  </div>
-                  <span className="font-semibold text-gray-800">Expensive Products</span>
-               </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center bg-gray-50 p-6 rounded-lg">
+              <div className="flex flex-col items-center">
+                <img src="https://caringskin.com.sg/wp-content/uploads/2023/11/Iconcapsule.svg" alt="Prescribed Medication" className="w-16 h-16 mb-4" />
+                <span className="font-semibold text-gray-800">Prescribed Medication</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <img src="https://caringskin.com.sg/wp-content/uploads/2023/10/Iconharsh.svg" alt="Invasive Procedures" className="w-16 h-16 mb-4" />
+                <span className="font-semibold text-gray-800">Invasive Procedures</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <img src="https://caringskin.com.sg/wp-content/uploads/2023/11/Icondollar.svg" alt="Expensive Products" className="w-16 h-16 mb-4" />
+                <span className="font-semibold text-gray-800">Expensive Products</span>
+              </div>
             </div>
           </div>
         </div>
